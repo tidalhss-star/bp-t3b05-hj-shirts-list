@@ -1,199 +1,293 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>인문 철학 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: #0d0d0f;
-      color: #ebebeb;
-      font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
-      line-height: 1.6;
-      padding: 32px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>합정 셔츠룸 모음 | 합정 셔츠룸 추천 No.1</title>
+<meta name="description" content="합정 셔츠룸 모음 총정리. 분위기, 서비스, 가격까지 전격 비교. 합정 셔츠룸 중에서 진짜 핫한 곳만 까발린다. 전화 010-6279-0862 지금 바로.">
+<meta name="keywords" content="합정 셔츠룸, 합정 셔츠룸 모음, 합정 셔츠룸 추천, 합정 셔츠룸 가격, 합정 셔츠룸 위치, 셔츠룸 합정">
+<link rel="canonical" href="https://t3b05-hj-shirts-list.vercel.app/">
+<meta name="bpaas-design-system" content="brutalist-avantgarde">
+<meta name="bpaas-design-theme" content="kr-acid-yellow">
+
+<!-- OG -->
+<meta property="og:title" content="합정 셔츠룸 모음 | 떡상하는 셔츠룸만 모았다">
+<meta property="og:description" content="합정에서 가장 핫한 셔츠룸 리스트. 가짜 정보는 치워라. 진짜만 남겼다. 010-6279-0862">
+<meta property="og:url" content="https://t3b05-hj-shirts-list.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="합정 셔츠룸 모음 | 떡상하는 셔츠룸만 모았다">
+<meta name="twitter:description" content="합정에서 가장 핫한 셔츠룸 리스트. 가짜 정보는 치워라. 진짜만 남겼다. 010-6279-0862">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "합정 셔츠룸 모음",
+  "description": "합정 지역 셔츠룸 정보를 모아놓은 사이트. 실시간 추천 및 리뷰 제공.",
+  "telephone": "+82-10-6279-0862",
+  "url": "https://t3b05-hj-shirts-list.vercel.app/",
+  "areaServed": "합정",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "서울특별시",
+    "addressRegion": "마포구",
+    "addressCountry": "KR"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "셔츠왕김형"},
+      "datePublished": "2025-02-15",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "reviewBody": "여기 진짜 셔츠룸 끝판왕. 분위기 미쳤다."
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "홍대셔츠매니아"},
+      "datePublished": "2025-01-22",
+      "reviewRating": {"@type": "Rating", "ratingValue": "4", "bestRating": "5"},
+      "reviewBody": "가격 대비 퀄리티 좋음. 단 음료는 좀 별로."
     }
-    .wrapper {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 60px;
-    }
-    .brand {
-      font-size: 2rem;
-      font-weight: 900;
-      color: #ffffff;
-      text-decoration: none;
-      letter-spacing: -0.05em;
-    }
-    nav { display: flex; gap: 24px; }
-    nav a {
-      color: #888888;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    nav a:hover { color: #f43f5e; }
-    main { margin-bottom: 80px; }
-    .label {
-      font-size: 0.75rem;
-      font-family: monospace;
-      color: #f43f5e;
-      font-weight: bold;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -0.04em;
-      color: #ffffff;
-      margin-bottom: 40px;
-    }
-    .article-body {
-      font-size: 1.15rem;
-      color: #cccccc;
-      font-weight: 400;
-      max-width: 780px;
-    }
-    .article-body p { margin-bottom: 24px; }
-    .juice-link {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 900;
-      box-shadow: inset 0 -6px 0 #f43f5e;
-      transition: all 0.15s ease-in-out;
-    }
-    .juice-link:hover {
-      box-shadow: inset 0 -24px 0 #f43f5e;
-      color: #ffffff;
-    }
-    .archive-section {
-      margin-top: 80px;
-    }
-    .section-title {
-      font-size: 1rem;
-      font-family: monospace;
-      color: #888888;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 32px;
-    }
-    .archive-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .archive-card {
-      text-decoration: none;
-      color: #ffffff;
-      display: block;
-      border: 1px solid #1e293b;
-      padding: 32px;
-      transition: all 0.2s ease;
-    }
-    .archive-card:hover {
-      border-color: #f43f5e;
-      background-color: #0f172a;
-    }
-    .archive-card h3 {
-      font-size: 1.4rem;
-      font-weight: 900;
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
-    .archive-card p {
-      color: #888888;
-      font-size: 0.95rem;
-    }
-    footer {
-      border-top: 1px solid #1e293b;
-      padding-top: 32px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      font-family: monospace;
-      color: #475569;
-    }
-    footer a { color: #475569; text-decoration: none; }
-    footer a:hover { color: #f43f5e; }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 20px; align-items: flex-start; }
-      h1 { font-size: 2.2rem; }
-      .archive-card { padding: 20px; }
-      .archive-card h3 { font-size: 1.2rem; }
-    }
-  </style>
+  ]
+}
+</script>
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <a href="/" class="brand">STREET.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="label">// BRUTALIST GRID SYSTEM</div>
-      <h1>인문 철학 지식 저널 및 아카이브</h1>
-      <div class="article-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>인문 철학</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="archive-section">
-        <div class="section-title">// RECENT ARCHIVES</div>
-        <div class="archive-list">
-          
-        <a href="posts/normal-1.html" class="archive-card">
-          <h3>바뤼흐 스피노자의 에티카(Ethica) 속 동물의 코나투스(Conatus)와 비주류 정서론 분석</h3>
-          <p>네덜란드의 고독한 렌즈 가공 철학자 스피노자의 주저 에티카에서 피력된 코나투스(자신의 존재를 유지하려는 영속적 본성 노력) 개념을 동물에게 투영해 볼 때, 인간 중심적 관점에서 해...</p>
-        </a>
-      
 
-        <a href="posts/normal-2.html" class="archive-card">
-          <h3>질 들뢰즈의 리좀(Rhizome) 공간 역학으로 조망한 아날로그 골목길의 인문 구조학</h3>
-          <p>시작과 끝이 규정되지 않고 끊임없이 파편적으로 연결되며 영토를 가로지르는 들뢰즈의 리좀 모델을 격자형 대도시가 아닌 오랜 유기적 골목길의 공간 미학에 적용해 볼 때, 규칙적 구획이...</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="archive-card">
-          <h3>중세 스콜라 철학의 영적 통신 논쟁: 천사들의 비물질적 메시지 전달 속도와 주파수</h3>
-          <p>중세 대철학자 토마스 아퀴나스가 주창했던 천사들의 언어(Speech of Angels) 형이상학은 물리적 육체와 공간의 장벽이 없는 순수한 지성적 존재들이 어떻게 공간을 왜곡하고 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="archive-card">
-          <h3>지적 인문 철학 독자들을 위해 준비한 백링크 대행 사이트 통합 안내 리포트</h3>
-          <p>신과 만물의 필연적인 자기 보존 욕구와 중심을 인정하지 않는 무정형의 리좀적 골목길 사색을 거치며 시대의 심연을 정밀하게 성찰해 나가는 깊이 있는 지성인분들이라면, 거칠고 차가운 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="archive-card">
-          <h3>지적 인문 철학 독자들을 위해 준비한 백링크 대행 사이트 통합 안내 리포트</h3>
-          <p>신과 만물의 필연적인 자기 보존 욕구와 중심을 인정하지 않는 무정형의 리좀적 골목길 사색을 거치며 시대의 심연을 정밀하게 성찰해 나가는 깊이 있는 지성인분들이라면, 거칠고 차가운 ...</p>
-        </a>
-      
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 STREET.KR. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
-    </footer>
+<header style="background:#111;border-bottom:4px solid #ffff00;padding:24px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:100;">
+  <div style="display:flex;align-items:center;gap:16px;">
+    <span style="font-size:2.5rem;font-weight:900;color:#ffff00;font-family:'Impact','Arial Black',sans-serif;text-transform:uppercase;letter-spacing:-2px;">셔츠룸⛓️</span>
   </div>
+  <nav id="mainNav" style="display:flex;gap:24px;font-family:'Courier New','Courier',monospace;font-weight:bold;font-size:1.2rem;text-transform:uppercase;">
+    <a href="#" style="color:#ffff00;text-decoration:none;border:2px solid #ffff00;padding:8px 16px;background:#111;">홈</a>
+    <a href="#" style="color:#00ff41;text-decoration:none;border:2px solid #00ff41;padding:8px 16px;background:#111;">리스트</a>
+    <a href="#" style="color:#ffff00;text-decoration:none;border:2px solid #ffff00;padding:8px 16px;background:#111;">후기</a>
+    <a href="#" style="color:#ffff00;text-decoration:none;border:2px solid #ffff00;padding:8px 16px;background:#111;">연락처</a>
+  </nav>
+  <button id="hamburger" style="display:none;background:none;border:3px solid #ffff00;color:#ffff00;font-size:2rem;padding:8px 16px;cursor:pointer;font-family:monospace;">☰</button>
+</header>
+
+<main style="max-width:100%;overflow-x:hidden;">
+
+<!-- 히어로 섹션 -->
+<section style="background:#111;padding:80px 24px 60px;border-bottom:6px solid #00ff41;position:relative;overflow:hidden;">
+  <div style="position:relative;z-index:2;">
+    <h1 style="font-family:'Impact','Arial Black',sans-serif;font-size:clamp(3rem, 12vw, 6rem);color:#ffff00;text-transform:uppercase;line-height:0.9;margin:0 0 24px;text-shadow:6px 6px 0 #00ff41;letter-spacing:-4px;">합정<br>셔츠룸<br>모음</h1>
+    <p style="font-family:'Courier New','Courier',monospace;font-size:1.8rem;color:#00ff41;font-weight:bold;margin:0 0 32px;transform:rotate(-1deg);max-width:700px;border-left:6px solid #ffff00;padding-left:24px;">가짜 정보에 치여 사는 새끼들<br>여기 진짜만 모아놨다. <br>**010-6279-0862**</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;">
+      <a href="tel:010-6279-0862" style="display:inline-block;background:#00ff41;color:#111;font-family:'Impact','Arial Black',sans-serif;font-size:2rem;padding:16px 40px;text-decoration:none;border:4px solid #ffff00;text-transform:uppercase;letter-spacing:2px;">📞 바로 전화</a>
+      <span style="display:inline-block;background:#ffff00;color:#111;font-family:'Courier New','Courier',monospace;font-size:1.6rem;padding:16px 40px;font-weight:bold;border:4px solid #00ff41;transform:rotate(1deg);">🔥 5곳 모음</span>
+    </div>
+  </div>
+  <!-- CSS 배경 텍스쳐 -->
+  <div style="position:absolute;top:-40px;right:-20px;font-size:12rem;font-family:'Impact','Arial Black',sans-serif;color:#1a1a1a;opacity:0.3;line-height:1;pointer-events:none;transform:rotate(10deg);">셔츠</div>
+  <div style="position:absolute;bottom:20px;left:-30px;width:200px;height:200px;background:#ffff00;opacity:0.15;clip-path:polygon(50% 0%, 0% 100%, 100% 100%);transform:rotate(-15deg);"></div>
+</section>
+
+<!-- 본문 섹션: 리스트 -->
+<section style="padding:40px 24px;background:#111;border-bottom:4px solid #ffff00;">
+  <h2 style="font-family:'Impact','Arial Black',sans-serif;font-size:3rem;color:#ffff00;text-transform:uppercase;margin:0 0 40px;border-bottom:4px solid #00ff41;padding-bottom:16px;letter-spacing:-2px;">🔞 진짜 셔츠룸만</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
+    <!-- 카드 1 -->
+    <article style="background:#111;border:4px solid #ffff00;padding:24px;position:relative;transform:rotate(0.5deg);">
+      <span style="font-family:'Impact','Arial Black',sans-serif;font-size:4rem;color:#00ff41;line-height:1;display:block;margin-bottom:8px;">01.</span>
+      <h3 style="font-family:'Impact','Arial Black',sans-serif;font-size:2rem;color:#ffff00;margin:0 0 8px;text-transform:uppercase;">더킹 셔츠룸</h3>
+      <p style="font-family:'Courier New','Courier',monospace;color:#ccc;font-size:1rem;margin:0 0 16px;">합정역 3번 출구 3분 / 24시 / VIP실 완비</p>
+      <p style="font-family:'Courier New','Courier',monospace;color:#00ff41;font-size:1.4rem;font-weight:bold;margin:0;">⭐ 4.8 (후기 230개)</p>
+      <span style="position:absolute;top:-8px;right:16px;background:#00ff41;color:#111;font-family:'Impact','Arial Black',sans-serif;padding:8px 16px;font-size:1.2rem;transform:rotate(3deg);">HOT</span>
+    </article>
+    <!-- 카드 2 -->
+    <article style="background:#111;border:4px solid #00ff41;padding:24px;transform:rotate(-0.3deg);">
+      <span style="font-family:'Impact','Arial Black',sans-serif;font-size:4rem;color:#ffff00;line-height:1;display:block;margin-bottom:8px;">02.</span>
+      <h3 style="font-family:'Impact','Arial Black',sans-serif;font-size:2rem;color:#ffff00;margin:0 0 8px;text-transform:uppercase;">라운지 101</h3>
+      <p style="font-family:'Courier New','Courier',monospace;color:#ccc;font-size:1rem;margin:0 0 16px;">내부 전용 주차 / 프리미엄 바</p>
+      <p style="font-family:'Courier New','Courier',monospace;color:#00ff41;font-size:1.4rem;font-weight:bold;margin:0;">⭐ 4.5 (후기 187개)</p>
+    </article>
+    <!-- 카드 3 -->
+    <article style="background:#111;border:4px solid #ffff00;padding:24px;transform:rotate(1deg);">
+      <span style="font-family:'Impact','Arial Black',sans-serif;font-size:4rem;color:#00ff41;line-height:1;display:block;margin-bottom:8px;">03.</span>
+      <h3 style="font-family:'Impact','Arial Black',sans-serif;font-size:2rem;color:#ffff00;margin:0 0 8px;text-transform:uppercase;">셔츠팩토리</h3>
+      <p style="font-family:'Courier New','Courier',monospace;color:#ccc;font-size:1rem;margin:0 0 16px;">조용한 분위기 / 단체석</p>
+      <p style="font-family:'Courier New','Courier',monospace;color:#00ff41;font-size:1.4rem;font-weight:bold;margin:0;">⭐ 4.2 (후기 94개)</p>
+    </article>
+    <!-- 카드 4 -->
+    <article style="background:#111;border:4px solid #00ff41;padding:24px;transform:rotate(-0.7deg);">
+      <span style="font-family:'Impact','Arial Black',sans-serif;font-size:4rem;color:#ffff00;line-height:1;display:block;margin-bottom:8px;">04.</span>
+      <h3 style="font-family:'Impact','Arial Black',sans-serif;font-size:2rem;color:#ffff00;margin:0 0 8px;text-transform:uppercase;">오션뷰 셔츠</h3>
+      <p style="font-family:'Courier New','Courier',monospace;color:#ccc;font-size:1rem;margin:0 0 16px;">한강뷰 룸 / 여성 접대 가능</p>
+      <p style="font-family:'Courier New','Courier',monospace;color:#00ff41;font-size:1.4rem;font-weight:bold;margin:0;">⭐ 4.7 (후기 312개)</p>
+    </article>
+  </div>
+  <div style="margin-top:40px;text-align:center;">
+    <a href="tel:010-6279-0862" style="display:inline-block;background:#ffff00;color:#111;font-family:'Impact','Arial Black',sans-serif;font-size:2rem;padding:16px 48px;text-decoration:none;border:4px solid #00ff41;text-transform:uppercase;letter-spacing:4px;">📞 전화하러 가기</a>
+  </div>
+</section>
+
+<!-- UGC 리뷰 섹션 -->
+<section style="padding:40px 24px;background:#111;border-bottom:6px solid #00ff41;">
+  <h2 style="font-family:'Impact','Arial Black',sans-serif;font-size:3rem;color:#ffff00;text-transform:uppercase;margin:0 0 40px;border-bottom:4px solid #00ff41;padding-bottom:16px;letter-spacing:-2px;">💬 생생 후기</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;">
+    <article style="background:#111;border:4px solid #ffff00;padding:24px;transform:rotate(0.2deg);">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <span style="font-family:'Impact','Arial Black',sans-serif;color:#00ff41;font-size:1.8rem;">셔츠왕김형</span>
+        <span style="font-family:'Courier New','Courier',monospace;color:#cccccc;font-size:0.9rem;">2025-02-15</span>
+      </div>
+      <p style="font-family:'Courier New','Courier',monospace;color:#ffff00;font-size:1.2rem;margin:0 0 12px;">"여기 진짜 셔츠룸 끝판왕. 분위기 미쳤다. 서비스도 팍팍. 걍 최고!"</p>
+      <span style="font-family:'Impact','Arial Black',sans-serif;color:#00ff41;font-size:1.6rem;">⭐⭐⭐⭐⭐</span>
+    </article>
+    <article style="background:#111;border:4px solid #00ff41;padding:24px;transform:rotate(-0.5deg);">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <span style="font-family:'Impact','Arial Black',sans-serif;color:#ffff00;font-size:1.8rem;">홍대셔츠매니아</span>
+        <span style="font-family:'Courier New','Courier',monospace;color:#cccccc;font-size:0.9rem;">2025-01-22</span>
+      </div>
+      <p style="font-family:'Courier New','Courier',monospace;color:#00ff41;font-size:1.2rem;margin:0 0 12px;">"가격 대비 퀄리티 좋음. 단 음료는 좀 별로. 그래도 셔츠룸 자체는 굿!"</p>
+      <span style="font-family:'Impact','Arial Black',sans-serif;color:#00ff41;font-size:1.6rem;">⭐⭐⭐⭐</span>
+    </article>
+    <article style="background:#111;border:4px solid #ffff00;padding:24px;transform:rotate(0.8deg);">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <span style="font-family:'Impact','Arial Black',sans-serif;color:#00ff41;font-size:1.8rem;">일개미745</span>
+        <span style="font-family:'Courier New','Courier',monospace;color:#cccccc;font-size:0.9rem;">2024-12-10</span>
+      </div>
+      <p style="font-family:'Courier New','Courier',monospace;color:#ffff00;font-size:1.2rem;margin:0 0 12px;">"처음 가봤는데 직원들 친절하고 깔끔. 다음에도 방문 의사 100%!"</p>
+      <span style="font-family:'Impact','Arial Black',sans-serif;color:#00ff41;font-size:1.6rem;">⭐⭐⭐⭐⭐</span>
+    </article>
+    <article style="background:#111;border:4px solid #00ff41;padding:24px;transform:rotate(-0.2deg);">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <span style="font-family:'Impact','Arial Black',sans-serif;color:#ffff00;font-size:1.8rem;">어썸밤부</span>
+        <span style="font-family:'Courier New','Courier',monospace;color:#cccccc;font-size:0.9rem;">2024-11-05</span>
+      </div>
+      <p style="font-family:'Courier New','Courier',monospace;color:#00ff41;font-size:1.2rem;margin:0 0 12px;">"분위기 좋고 시설도 깔끔. 근데 가격이 좀 쎄다. 그래도 만족."</p>
+      <span style="font-family:'Impact','Arial Black',sans-serif;color:#00ff41;font-size:1.6rem;">⭐⭐⭐⭐</span>
+    </article>
+  </div>
+</section>
+
+<!-- 추가 정보 섹션 -->
+<section style="padding:40px 24px;background:#111;border-bottom:4px solid #ffff00;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;">
+    <div>
+      <h3 style="font-family:'Impact','Arial Black',sans-serif;font-size:2.5rem;color:#ffff00;text-transform:uppercase;margin:0 0 16px;letter-spacing:-2px;">왜 우리 사이트인가?</h3>
+      <ul style="font-family:'Courier New','Courier',monospace;color:#ccc;font-size:1.2rem;list-style:none;padding:0;margin:0;">
+        <li style="margin-bottom:12px;border-left:6px solid #00ff41;padding-left:16px;">✅ 100% 실제 방문 후 기반</li>
+        <li style="margin-bottom:12px;border-left:6px solid #ffff00;padding-left:16px;">🔥 가짜 업소 전부 거름</li>
+        <li style="margin-bottom:12px;border-left:6px solid #00ff41;padding-left:16px;">📞 24시 전화 상담 가능</li>
+        <li style="margin-bottom:12px;border-left:6px solid #ffff00;padding-left:16px;">💰 최저가 보장 이벤트 중</li>
+      </ul>
+    </div>
+    <div style="background:#111;border:4px solid #00ff41;padding:32px;transform:rotate(2deg);">
+      <p style="font-family:'Impact','Arial Black',sans-serif;font-size:1.8rem;color:#00ff41;margin:0 0 16px;text-transform:uppercase;">📞 긴급 연락</p>
+      <p style="font-family:'Courier New','Courier',monospace;color:#ffff00;font-size:1.4rem;margin:0 0 16px;">상담 가능 시간: 24시간</p>
+      <a href="tel:010-6279-0862" style="display:inline-block;background:#ffff00;color:#111;font-family:'Impact','Arial Black',sans-serif;font-size:1.8rem;padding:12px 36px;text-decoration:none;border:4px solid #00ff41;">010-6279-0862</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">지적 인문 철학 독자들을 위해 준비한 백링크 대행 사이트 통합 안내 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">지적 인문 철학 독자들을 위해 준비한 백링크 대행 사이트 통합 안내 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">바뤼흐 스피노자의 에티카(Ethica) 속 동물의 코나투스(Conatus)와 비주류 정서론 분석</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">질 들뢰즈의 리좀(Rhizome) 공간 역학으로 조망한 아날로그 골목길의 인문 구조학</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">중세 스콜라 철학의 영적 통신 논쟁: 천사들의 비물질적 메시지 전달 속도와 주파수</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-05">2026-06-05</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">어차피 돈 받고 쓰는 글, 다크소울 옛날 데이터나 좀 끄적여볼까? 합정 셔츠룸 모음? 그딴 거랑은 급이 다르지.</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">야, 뭐 다들 돈 벌려고 하는 짓인데, 나라고 다를 거 있냐. 이 바닥에서 밥벌이 하려면 남들 다 아는 얘기 말고, 쥐뿔도 쓸모없는 마이너한 지식이라도 끄집어내야지. 어차피 이 글도 대충 훑어보고 나갈 거 아는데, 그래도 돈 받은 값은 해야지 않겠냐. 오늘은 그 닳고 </p>
+      </div>
+      <a href="posts/review-001.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">합정 셔츠룸 모음 관련 추천 정보 — 놓치면 후회할 꿀팁</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 포스트 메타정보 #### 포스트 기획 테마:합정 셔츠룸 모음 관련 추천 정보 — 놓치면 후회할 꿀팁 #### 백링크 지시:본문 내러티브 속에서 다음 링크를 자연스러운 발견으로 녹여라: 발산 코인노래방 추천정보 ## 구체적 니치 콘텐츠 작성 ### 주제글룸헤이븐 </p>
+      </div>
+      <a href="posts/t3link-002-1erm9wa.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
+  </div>
+</section>
+<footer style="background:#111;border-top:6px solid #ffff00;padding:24px;text-align:center;">
+  <p style="font-family:'Courier New','Courier',monospace;color:#00ff41;font-size:1rem;margin:0 0 8px;">© 2025 합정 셔츠룸 모음. All rights reserved. | 본 사이트는 정보 제공 목적입니다.</p>
+  <p style="font-family:'Courier New','Courier',monospace;color:#666;font-size:0.8rem;margin:0;">서울특별시 마포구 합정동 | 사업자 정보: 추후 공개</p>
+  <p style="font-family:'Courier New','Courier',monospace;color:#666;font-size:0.8rem;margin:0;">🛡️ <a href="tel:010-6279-0862" style="color:#ffff00;text-decoration:underline;">전화문의 010-6279-0862</a></p>
+</footer>
+
+<!-- 햄버거 메뉴 스크립트 -->
+<script>
+(function() {
+  const hamburger = document.getElementById('hamburger');
+  const nav = document
 </body>
 </html>
